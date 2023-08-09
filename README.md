@@ -28,8 +28,8 @@ I had only vaguely heard of web components, so my first step was to head on over
 
 ## What I learned
 - Web Component API
-- Shadow DOM
-- Dependency bundlers
+- Working with the shadow DOM
+- Implementing a customization API via component attributes
 
 ## Useful resources
 
