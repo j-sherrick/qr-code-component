@@ -1,6 +1,6 @@
-# Frontend Mentor - QR code component solution
+# QR Card component
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
+This is a reusable card component utilizing the Web Components API that dynamically generates and displays a QR code. It is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
 
 ## Table of contents
 
