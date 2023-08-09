@@ -5,10 +5,10 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Overview](#overview)
-  - [Links](#links)
+- [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
