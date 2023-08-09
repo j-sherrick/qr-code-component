@@ -22,7 +22,7 @@ This is a reusable card component that uses node-qrcode bundled with Browserify 
 
 ## My process
 
-I had only vaguely heard of web components, so my first step was to head on over to the Mozilla docs and look at the API reference to learn how to even use them in the first place. I understood the general concept but then went over to one of my favorite YouTube channels, [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) to watch a video and see a practical working example.
+I had only vaguely heard of web components, so my first step was to head on over to the Mozilla docs and have a look at the API reference. I wanted to use component-based design without relying on a framework, keeping things as 'vanilla' as possible. I needed to see someone implement a practical, working example of a component using the Web Component API, and luckily one of [my favorite web dev YouTube channels](https://www.youtube.com/@WebDevSimplified) had a video that was exactly what I needed.
 
 ### Built with
 
