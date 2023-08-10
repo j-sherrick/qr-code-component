@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="components/QRCard.js" type="text/javascript"></script>
-    <title>QR Card Component | Live Update</title>
+    <title>Live Update | QR Card Component</title>
 
     <style>
         .attribution { text-align: center; }
@@ -24,10 +24,15 @@
         :root {
             --light-gray: hsl(212, 45%, 89%);
             --grayish-blue: hsl(220, 15%, 55%);
+            --medium-grayish-blue: hsl(220, 20%, 80%);
+            --light-grayish-blue: hsl(220, 25%, 85%);
             --dark-blue: hsl(218, 44%, 22%);
         }
 
-        body, header, main {
+        body,
+        header,
+        main,
+        form {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,28 +62,104 @@
             flex-wrap: wrap;
         }
 
+        section {
+            min-width: 500px;
+        }
+
         h1 {
             font-size: 3rem;
+        }
+
+        form {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .url,
+        .heading,
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            gap: 0.325rem;
+            width: 100%;
+        }
+
+        button {
+            padding: 0.7rem 1.3rem;
+            background-color: var(--light-grayish-blue);
+            border-radius: 0.5rem;
+            border: 1px solid var(--grayish-blue);
+            font-size: 1.1rem;
+        }
+
+        button:hover, button:focus {
+            cursor: pointer;
+            background-color: var(--medium-grayish-blue);
+        }
+
+        textarea {
+            padding: 0 0.25rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>QR Card Demo</h1>
-        <p>Each card in this demonstration showcases a self-contained and reusable Web Component that dynamically generates a QR code based on the URL provided in the `url` attribute. Custom description text can be provided to each element instance through the use of named slots.</p>
+        
     </header>
     <main>
         <section class="live-update-form">
             <form class="qr-update">
-
+                <div class="url">
+                    <label for="url">URL</label>
+                    <input 
+                        type="text"
+                        name="url"
+                        id="url" 
+                        maxlength="50"
+                        size="50"
+                        placeholder="Enter a URL to encode"
+                    />
+                </div>
+                <div class="heading">
+                    <label for="heading">Heading</label>
+                    <textarea 
+                        name="heading"
+                        id="heading" 
+                        maxlength="100"
+                        placeholder="Enter an impactful heading"
+                        rows="4"
+                        cols="50"
+                    ></textarea>
+                </div>
+                <div class="description">
+                    <label for="description">Description</label>
+                    <textarea 
+                        name="description"
+                        id="description" 
+                        maxlength="250"
+                        placeholder="Enter a convincing pitch that gets people to scan your code"
+                        rows="4"
+                        cols="50"
+                     ></textarea>
+                </div>
+                <button id="submit">Submit</button>
             </form>
         </section>
+
         <section class="live-update-component">
             <qr-card url="Update the QR Card with the form on this page!">
                 <h2 slot="heading">QR Cards can be updated dynamically</h2>
-                <p slot="caption">Use the form to pass in a new URL and description text, and the component dynamically generates a new QR code</p>
+                <p slot="caption">Use the form to pass in a URL, heading, and description text, and the component dynamically generates a new QR code</p>
             </qr-card>
         </section>
+
     </main>
 
     <footer class="attribution">
@@ -86,5 +167,33 @@
         Coded by <a href="https://github.com/j-sherrick">Jason Sherrick</a> - 
         Return to <a href="index.html">solution page</a>
     </footer>
+    <script type="text/javascript">
+        const urlInput = document.getElementById('url');
+        const headInput = document.getElementById('heading');
+        const descInput = document.getElementById('description');
+
+        function resetForm() {
+            urlInput.value = '';
+            headInput.value = '';
+            descInput.value = '';
+        }
+
+        function updateCard() {
+            const qrCard = document.querySelector('qr-card');
+            const qrHead = qrCard.querySelector('h2');
+            const qrDesc = qrCard.querySelector('p');
+            qrCard.setAttribute('url', urlInput.value);
+            qrHead.innerText = headInput.value;
+            qrDesc.innerText = descInput.value;
+        }
+
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            updateCard();
+            resetForm();
+        });
+    </script>
 </body>
 </html>
