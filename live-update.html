@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/qr-favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="components/QRCard.js" type="text/javascript"></script>
+    <title>QR Card Component | Live Update</title>
+
+    <style>
+        .attribution { text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --light-gray: hsl(212, 45%, 89%);
+            --grayish-blue: hsl(220, 15%, 55%);
+            --dark-blue: hsl(218, 44%, 22%);
+        }
+
+        body, header, main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header, main {
+            max-width: 1100px;
+            text-align: center;
+        }
+
+        body {
+            background-color: #d5e1ef;
+            flex-direction: column;
+            gap: 3rem;
+            font-family: 'Outfit', system-ui, sans-serif;
+            color: var(--dark-blue);
+            padding: 2rem 1rem;
+        }
+
+        header {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        main {
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QR Card Demo</h1>
+        <p>Each card in this demonstration showcases a self-contained and reusable Web Component that dynamically generates a QR code based on the URL provided in the `url` attribute. Custom description text can be provided to each element instance through the use of named slots.</p>
+    </header>
+    <main>
+        <section class="live-update-form">
+            <form class="qr-update">
+
+            </form>
+        </section>
+        <section class="live-update-component">
+            <qr-card url="Update the QR Card with the form on this page!">
+                <h2 slot="heading">QR Cards can be updated dynamically</h2>
+                <p slot="caption">Use the form to pass in a new URL and description text, and the component dynamically generates a new QR code</p>
+            </qr-card>
+        </section>
+    </main>
+
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> - 
+        Coded by <a href="https://github.com/j-sherrick">Jason Sherrick</a> - 
+        Return to <a href="index.html">solution page</a>
+    </footer>
+</body>
+</html>
