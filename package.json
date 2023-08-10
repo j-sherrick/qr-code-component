@@ -1,14 +1,7 @@
 {
-  "dependencies": {
-    "qrcode": "^1.5.3"
-  },
-  "devDependencies": {
-    "browserify": "^17.0.0",
-    "express": "^4.18.2"
-  },
   "name": "qr-code-component",
   "description": "This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
@@ -23,7 +16,7 @@
     "frontendmentor.com",
     "javascript",
     "shadow-dom",
-    "qr-code",
+    "qrcode",
     "html",
     "css"
   ],
@@ -32,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/j-sherrick/qr-code-component/issues"
   },
-  "homepage": "https://github.com/j-sherrick/qr-code-component#readme"
+  "homepage": "https://github.com/j-sherrick/qr-code-component#readme",
+  "dependencies": {
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0"
+  }
 }
