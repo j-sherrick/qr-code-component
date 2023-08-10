@@ -1,0 +1,56 @@
+.attribution {
+    text-align: center;
+    font-size: 0.8rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --medium-grayish-blue: hsl(220, 20%, 80%);
+    --light-grayish-blue: hsl(220, 25%, 85%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+body,
+header,
+main,
+form,
+nav  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header, main {
+    max-width: 1100px;
+    text-align: center;
+}
+
+body {
+    background-color: var(--light-gray);
+    flex-direction: column;
+    gap: 3rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--dark-blue);
+    padding: 2rem 1rem;
+}
+
+main {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 3rem;
+}

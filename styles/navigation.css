@@ -1,0 +1,12 @@
+header {
+    height: 5rem;
+}
+
+nav {
+    gap: 3rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
