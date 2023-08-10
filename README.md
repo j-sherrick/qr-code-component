@@ -1,6 +1,8 @@
 # QR Card component
 
-This is a reusable card component utilizing the Web Components API that dynamically generates and displays a QR code. It is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
+The QR Card component is a fully self-contained, drop-in solution utilizing the Web Components API and `node-qrcode` for dynamically generating and displaying QR codes within your web applications. Just add `QRCard.js` anywhere in your markup and it's ready to go out-of-the box. It really is that easy!
+
+It is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
 
 ## Table of contents
 
@@ -18,8 +20,11 @@ This is a reusable card component that uses node-qrcode bundled with Browserify 
 
 ## My process
 
-I had only vaguely heard of web components, so my first step was to head on over to the Mozilla docs and have a look at the API reference. I wanted to use component-based design without relying on a framework, keeping things as 'vanilla' as possible. I needed to see someone implement a practical, working example of a component using the Web Component API, and luckily one of [my favorite web dev YouTube channels](https://www.youtube.com/@WebDevSimplified) had a video that was exactly what I needed.
+I wanted to make a reusable component instead of a one-off solution to the challenge. I also like to keep things as vanilla as possible when it comes to programming challenges so I did not want to use any frameworks like React or Astro. I knew the Web Components API existed but that's about it, which meant a lot of opportunity for learning and made it the perfect candidate for this challenge!
 
+I built and styled the card component and along the way I had the idea to make it generate QR codes dynamically from a user provided url. After all if it only displays the same QR code then what is the point of making it reusable? Not to mention that is pretty boring!
+
+Next I had to dive into some more in-depth knowledge of Web Components such as working with lifecycle callbacks. 
 ## Built with
 
 - [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) - Web Component API
