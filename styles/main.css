@@ -11,6 +11,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -25,14 +26,13 @@
 body,
 header,
 main,
-form,
-nav  {
+form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header, main {
+main, nav {
     max-width: 1100px;
     text-align: center;
 }
@@ -47,6 +47,7 @@ body {
 }
 
 main {
+    margin-top: 5.5rem;
     gap: 2rem;
     flex-wrap: wrap;
 }

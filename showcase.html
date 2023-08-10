@@ -8,13 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/navigation.css" rel="stylesheet">
     <script defer src="components/QRCard.js" type="text/javascript"></script>
     <title>Demo | QR Card Component</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Solution</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="interactive.html">Interactive</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <h1>QR Card Demo</h1>
-        <p>Each card in this demonstration showcases a self-contained and reusable Web Component that dynamically generates a QR code based on the URL provided in the `url` attribute. Custom description text can be provided to each element instance through the use of named slots.</p>
         <qr-card url="https://www.webcomponents.org/introduction">
             <h2 slot="heading">Level up your designs with creative components</h2>
             <p slot="caption">Scan the QR code to learn how to create custom, reusable HTML tags to use in web pages and apps</p>
