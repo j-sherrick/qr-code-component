@@ -4,6 +4,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: var(--light-gray-opaque);
 }
 
 nav ul {
@@ -26,19 +27,16 @@ nav ul li a {
     letter-spacing: 0.02rem;
     font-size: 1.1rem;
     color: var(--grayish-blue);
-    transition: color 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .active {
     color: var(--dark-blue);
+    transform: scale(1.1);
 }
 
 nav ul li div {
     border-bottom: 2px solid var(--dark-blue);
     transition: width 250ms ease-in-out;
     width: 0%;
-}
-
-nav ul li div:hover {
-    width: 100%;
 }

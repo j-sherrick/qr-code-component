@@ -17,6 +17,7 @@
 
 :root {
     --light-gray: hsl(212, 45%, 89%);
+    --light-gray-opaque: hsla(212, 46%, 89%, 0.85);
     --grayish-blue: hsl(220, 15%, 55%);
     --medium-grayish-blue: hsl(220, 20%, 80%);
     --light-grayish-blue: hsl(220, 25%, 85%);
@@ -34,7 +35,6 @@ form {
 
 main, nav {
     max-width: 1100px;
-    text-align: center;
 }
 
 body {

@@ -30,6 +30,7 @@ button {
     border-radius: 0.5rem;
     border: 1px solid var(--grayish-blue);
     font-size: 1.1rem;
+    transition: background-color 250ms ease-in-out;
 }
 
 button:hover, button:focus {

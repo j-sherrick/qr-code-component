@@ -24,7 +24,7 @@ I wanted to make a reusable component instead of a one-off solution to the chall
 
 I built and styled the card component and along the way I had the idea to make it generate QR codes dynamically from a user provided url. After all if it only displays the same QR code then what is the point of making it reusable? Not to mention that is pretty boring!
 
-Next I had to dive into some more in-depth knowledge of Web Components such as working with lifecycle callbacks. 
+First step was to learn how to use lifecycle callbacks to get a string from a custom `url` attribute both when the element is attached to the DOM, and whenever the attribute is changed 
 ## Built with
 
 - [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) - Web Component API
@@ -32,7 +32,7 @@ Next I had to dive into some more in-depth knowledge of Web Components such as w
 - [node-qrcode](https://www.npmjs.com/package/qrcode/) - QR code generator
 
 ## What I learned
-- Web Component API
+- Web Components API
 - Working with the shadow DOM
 - Implementing a customization API via component attributes
 
