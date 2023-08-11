@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/qr-favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet">
+    <link href="styles/navigation.css" rel="stylesheet">
+    <script defer src="components/QRCard.js" type="text/javascript"></script>
+    <title>Live Update | QR Card Component</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Solution</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a class="active" href="interactive.html">Interactive</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="live-update-form">
+            <form class="qr-update">
+                <div class="url">
+                    <label for="url">URL</label>
+                    <input 
+                        type="text"
+                        name="url"
+                        id="url" 
+                        maxlength="100"
+                        size="50"
+                        placeholder="Enter a URL to encode"
+                    />
+                </div>
+                <div class="heading">
+                    <label for="heading">Heading</label>
+                    <textarea 
+                        name="heading"
+                        id="heading" 
+                        maxlength="100"
+                        placeholder="Enter your main heading here"
+                        rows="4"
+                        cols="50"
+                    ></textarea>
+                </div>
+                <div class="description">
+                    <label for="description">Description</label>
+                    <textarea 
+                        name="description"
+                        id="description" 
+                        maxlength="250"
+                        placeholder="A descriptive caption or subheading goes here"
+                        rows="4"
+                        cols="50"
+                     ></textarea>
+                </div>
+                <button id="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="live-update-component">
+            <qr-card url="Update the QR Card with the form on this page!">
+                <h2 slot="heading">QR Cards can be updated dynamically</h2>
+                <p slot="caption">Use the form to pass in a URL, heading, and description text, and the component dynamically generates a new QR code</p>
+            </qr-card>
+        </section>
+
+    </main>
+
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> - 
+        Coded by <a href="https://github.com/j-sherrick">Jason Sherrick</a>
+    </footer>
+
+    <script type="text/javascript">
+
+        const urlInput = document.getElementById('url');
+        const headInput = document.getElementById('heading');
+        const descInput = document.getElementById('description');
+
+        function resetForm() {
+            urlInput.value = '';
+            headInput.value = '';
+            descInput.value = '';
+        }
+
+        function updateCard() {
+            const qrCard = document.querySelector('qr-card');
+            const qrHead = qrCard.querySelector('h2');
+            const qrDesc = qrCard.querySelector('p');
+            qrCard.setAttribute('url', urlInput.value);
+            qrHead.innerText = headInput.value;
+            qrDesc.innerText = descInput.value;
+        }
+
+        function submit(e) {
+            e.preventDefault();
+            updateCard();
+            resetForm();
+        }
+
+        document.querySelector('button').addEventListener('click', submit);
+
+    </script>
+</body>
+</html>

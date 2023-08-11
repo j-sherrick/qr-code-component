@@ -26,10 +26,11 @@
     "url": "https://github.com/j-sherrick/qr-code-component/issues"
   },
   "homepage": "https://github.com/j-sherrick/qr-code-component#readme",
-  "dependencies": {
-  },
   "devDependencies": {
-    "qrcode": "^1.5.3",
-    "browserify": "^17.0.0"
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "browserify": "^17.0.0",
+    "minify": "^10.3.0",
+    "qrcode": "^1.5.3"
   }
 }
