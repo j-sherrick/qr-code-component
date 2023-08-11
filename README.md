@@ -1,6 +1,7 @@
 # QR Card component
+The QR Card component is a reusable, fully self-contained Web Component for dynamically generating and displaying QR codes along with related information within your web applications.
 
-## This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
 
 ## Table of contents
 
@@ -15,8 +16,6 @@
 - [Acknowledgments](#acknowledgments)
 
 ### Overview
-
-The QR Card component is a reusable, fully self-contained Web Component for dynamically generating and displaying QR codes along with related information within your web applications.
 
 The `qr-card` custom element encapsulates a visual card containing a QR code dynamically generated using the `node-qrcode` npm package, which has been bundled with the component using Browserify so the component is a standalone solution; no external dependencies or API calls are required to make it work.
 
