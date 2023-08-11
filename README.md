@@ -39,11 +39,17 @@ Now you can include the `<qr-code>` element anywhere in your HTML:
 </qr-card>
 ```
 
-![A rendered QR Card component](./images/screenshots/component-alone.webp)
+#### Screenshots
 
-Components can be used in your HTML as many times as you'd like, just like any other HTML element:
-
-![A row of three QR cards](./images/showcase-row-3.webp)
+<img
+  src="./images/screenshots/component.webp"
+  alt="a rendered qr card web component"
+  style="
+    display: inline-block;
+    height: 200px;
+    width: auto;
+  "
+>
 
 Using lifecycle callbacks we can watch the `url` attribute for changes, and have the same component generate a new QR code any time it's updated:
 
