@@ -65,7 +65,7 @@ The subheading or description. This should be a `<p>` element as this is what th
 ## Screenshots
 Add as many `<qr-code>` elements to the page as your tender heart desires:
 
-![A row of three cards](images/screenshots/showcase-row-3.webp)
+![A row of three cards](images/screenshots/component-showcase.webp)
 
 Using lifecycle callbacks we can watch the `url` attribute for changes, and have the same component generate a new QR code any time it's updated:
 
